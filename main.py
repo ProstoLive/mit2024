@@ -1,9 +1,12 @@
 def fib(n):
-    if n == 1:
-        return 0
-    elif n == 2:
-        return 1
-    else:
-        return fib(n-1) + fib(n-2)
+    fib_process = [0, 1]
+    print(fib_process[0])
+    print(fib_process[1])
+    for i in range(n-2):
+        res = fib_process[-1] + fib_process[-2]
+        print(res)
+        fib_process.append(res)
 
-print(fib(int(input("Enter n:"))))
+
+
+fib(int(input("Enter n:")))
